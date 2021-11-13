@@ -1,0 +1,6 @@
+{
+        "name": "mosquito",
+        "color":"magenta",
+        "growth_rate": 3.66,
+        "prefered_enviroments":  ["forrest","swamp"]
+}
