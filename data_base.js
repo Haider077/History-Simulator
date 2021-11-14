@@ -1,6 +1,2 @@
 
-let GLOBAL_ENTITIES;
-
-$.getJSON("database/entity.json", function(json) {
-    GLOBAL_ENTITIES
-});
+let ent_mosquito = {name:"mosquito",population:"100"};

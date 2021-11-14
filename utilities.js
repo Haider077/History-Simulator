@@ -1,5 +1,11 @@
 
-const magenta = createRGBColor(255,0,255);
+const mosquito = createRGBColor(255,0,255);
+
+
+
+
+
+
 function createRGBColor(r,g,b){
     let rgb = [r,g,b];
     return rgb;

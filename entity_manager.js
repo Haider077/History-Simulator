@@ -12,14 +12,13 @@ const entity = function(color,popualtion,location){
 }
 
 
-
 function getEntiityByColor(color){
 
     let ent;
     console.log(color);
-    if(color[0] == magenta[0] && color[1] == magenta[1] && color[2] == magenta[2]){
+    if(color[0] == mosquito[0] && mosquito[1] == mosquito[1] && color[2] == mosquito[2]){
 
-        console.log("M")
+        ent = ent_mosquito.name;
 
     }
 
