@@ -18,7 +18,7 @@ function getEntiityByColor(color){
     console.log(color);
     if(color[0] == mosquito[0] && mosquito[1] == mosquito[1] && color[2] == mosquito[2]){
 
-        ent = ent_mosquito.name;
+        ent = ent_mosquito;
 
     }
 

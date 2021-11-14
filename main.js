@@ -14,7 +14,7 @@ function mouseDragged() {
 
     //fill(color(255,0,255));
     set(mouseX, mouseY,color(255,0,255));
-    
+
   }
 
 }
@@ -36,7 +36,7 @@ function setup()
 
     updatePixels();
     //console.log("terrain : " + getClassifiedTerrain(getHSVValue(colorK)));
-    //console.log("entity : " + getEntiityByColor(getRGBValue(colorC)));
+    console.log("entity : " + getEntiityByColor(getRGBValue(colorC)));
   }
 
 
