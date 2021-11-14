@@ -1,5 +1,6 @@
+
 function simulate(boundX,boundY){
-    for(let i =0; i < 10000; i++){
+    for(let i =0; i < 1000; i++){
         x = random(0,boundX);
         y = random(0,boundY);
 
@@ -26,4 +27,8 @@ function simulate(boundX,boundY){
 
     }
 
+}
+
+function simulate2(){
+    
 }

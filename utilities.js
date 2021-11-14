@@ -1,11 +1,4 @@
 
-const mosquito = createRGBColor(255,0,255);
-
-
-
-
-
-
 function createRGBColor(r,g,b){
     let rgb = [r,g,b];
     return rgb;
@@ -16,6 +9,13 @@ function getRGBValue(color){
     return rgb;
 }
 
+function compareRGBColors(a,b){
+
+    if(a[0] == b[0] && a[1] == b[1] && a[2] == b[2]){
+        return true;
+    }
+
+}
 function getHSVValue(color){
 
     let r = color[0] / 255;

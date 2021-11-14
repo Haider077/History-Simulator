@@ -1,27 +1,33 @@
 
 
+function simulateEntity(entity,color){
+
+    let dispx = random(-1,1);
+    let dispy = random(-1,1);
+
+    get(entity.position.x,entity.position.y);
+
+    if(getClassifiedTerrain(getHSVValue(img.get(entity.position.x + dispx,entity.position.y + dispy))) != terrainTypes.OCEAN){
+        set(entity.position.x + dispx,entity.position.y + dispy,color);
+        entity.position.x += dispx;
+        entity.position.y += dispy;
+    }
+    else{
+        
+    }
+        
 
 
-
-const entity = function(color,popualtion,location){
-
-    this.color = color;
-    this.popualtion = popualtion;
-    this.location = location;
 
 }
 
-
-function getEntiityByColor(color){
+function getEntiityByRGBColor(color){
 
     let ent;
-    console.log(color);
-    if(color[0] == mosquito[0] && mosquito[1] == mosquito[1] && color[2] == mosquito[2]){
 
-        ent = ent_mosquito;
-
+    if(compareRGBColors(color,neanderthal_color)){
+        ent = ent_neanderthal;
     }
-
 
     return ent;
 
