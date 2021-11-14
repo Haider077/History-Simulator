@@ -1,29 +1,33 @@
 
 
-let img;
+let terrain;
+
+
 function preload() {
-  img = loadImage('maps/earth.jpg');
-  img1 = loadImage('maps/empty.png');
+  terrain = loadImage('maps/earth.jpg');
 
 }
-let simObj = [];
 
-function mouseDragged() {
+let agents = [];
+let locations = [];
 
-  let colorK = img.get(mouseX, mouseY);
-  
+function mouseClicked() {
+
+  let colorK = terrain.get(mouseX, mouseY);
+  console.log(agents);
   if(!(getHSVValue(colorK).hue > 84 && getHSVValue(colorK).hue < 174)){
 
 
     set(mouseX, mouseY,color(85,100,175));
-    let newObj = Object.create(ent_neanderthal);
-    newObj.position.x = mouseX;
-    newObj.position.y = mouseY;
-    simObj.push(newObj);
+
+    let newObj = new ent_neanderthal(mouseX,mouseY);
+
+    agents.push(newObj);
 
   }
 
 }
+
 function setup()
 {
   
@@ -31,7 +35,7 @@ function setup()
  
   pixelDensity(1);
 
-  image(img,0,0);
+  image(terrain,0,0);
 
 
   onmousemove = function(e){
@@ -42,7 +46,7 @@ function setup()
 
     updatePixels();
     //console.log("terrain : " + getClassifiedTerrain(getHSVValue(colorK)));
-    console.log(getEntiityByRGBColor(getRGBValue(colorC)));
+    //console.log(getEntiityByRGBColor(getRGBValue(colorC)));
   }
 
 
@@ -51,13 +55,25 @@ function setup()
 }
 
 function draw(){
-  //simulate(1000,1000);
-  for(let i = 0; i < simObj.length; i++){
-    simulateEntity(simObj[0],color(85,100,175));
-  }
+  
+  
+    
+  simulateAgents()
+
   updatePixels();
 }
 
+
+function simulateAgents(){
+  for(let time = 0; time < 10; time ++){
+    for(let i = 0; i < agents.length; i++){
+      
+      agents[i].migrate();
+      
+    }
+  }
+
+}
 
 
 

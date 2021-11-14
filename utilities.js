@@ -16,6 +16,10 @@ function compareRGBColors(a,b){
     }
 
 }
+
+function getRandomColor(){
+    return {r:random(0,255),g:random(0,255),b:random(0,255)};
+}
 function getHSVValue(color){
 
     let r = color[0] / 255;

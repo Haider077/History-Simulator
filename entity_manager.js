@@ -7,17 +7,16 @@ function simulateEntity(entity,color){
 
     get(entity.position.x,entity.position.y);
 
-    if(getClassifiedTerrain(getHSVValue(img.get(entity.position.x + dispx,entity.position.y + dispy))) != terrainTypes.OCEAN){
+    if(getClassifiedTerrain(getHSVValue(terrain.get(entity.position.x + dispx,entity.position.y + dispy))) != terrainTypes.OCEAN){
         set(entity.position.x + dispx,entity.position.y + dispy,color);
         entity.position.x += dispx;
         entity.position.y += dispy;
     }
     else{
-        
+       // entity.position.x = entity.startingPos.x;
+       // entity.position.y = entity.startingPos.y;
+        //set(entity.position.x + dispx,entity.position.y + dispy,color);
     }
-        
-
-
 
 }
 
