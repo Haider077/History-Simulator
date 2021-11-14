@@ -52,7 +52,7 @@ function getHSVValue(color){
     value = cMax;
     
     let hsv = {hue,saturation,value};
-    console.log(hsv);
+    
     return hsv;
 }
 

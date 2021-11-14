@@ -14,7 +14,7 @@ function mouseDragged() {
 
     //fill(color(255,0,255));
     set(mouseX, mouseY,color(255,0,255));
-
+    
   }
 
 }
@@ -27,23 +27,26 @@ function setup()
 
   image(img,0,0);
 
-  
+
   onmousemove = function(e){
-    let colorK = img.get(mouseX, mouseY);
-    let colorC = get(mouseX,mouseY);
+    //let colorK = img.get(mouseX, mouseY);
+    //let colorC = get(mouseX,mouseY);
     
+    
+
     updatePixels();
-    console.log("terrain : " + getClassifiedTerrain(getHSVValue(colorK)));
-    console.log("entity : " + getEntiityByColor(getRGBValue(colorC)));
+    //console.log("terrain : " + getClassifiedTerrain(getHSVValue(colorK)));
+    //console.log("entity : " + getEntiityByColor(getRGBValue(colorC)));
   }
 
 
-  updatePixels();
+  
   
 }
 
 function draw(){
-  
+  simulate(1000,1000);
+  updatePixels();
 }
 
 
